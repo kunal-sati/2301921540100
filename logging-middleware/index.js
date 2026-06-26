@@ -38,11 +38,25 @@ const config = {
 };
 
 const getEnv = (key, fallback) => {
-  if (typeof process !== "undefined" && process.env && process.env[key]) {
-    return process.env[key];
+  if (typeof globalThis !== "undefined" && globalThis.process && globalThis.process.env && globalThis.process.env[key]) {
+    return globalThis.process.env[key];
+  }
+  if (typeof window !== "undefined") {
+    if (key === "VITE_AUTH_API_URL") {
+      return (typeof import.meta !== "undefined" && import.meta.env && import.meta.env.VITE_AUTH_API_URL) || "/evaluation-service/auth";
+    }
+    if (key === "VITE_LOG_API_URL") {
+      return (typeof import.meta !== "undefined" && import.meta.env && import.meta.env.VITE_LOG_API_URL) || "/evaluation-service/logs";
+    }
+    if (key === "VITE_NOTIFICATIONS_API_URL") {
+      return (typeof import.meta !== "undefined" && import.meta.env && import.meta.env.VITE_NOTIFICATIONS_API_URL) || "/evaluation-service/notifications";
+    }
   }
   if (typeof import.meta !== "undefined" && import.meta.env && import.meta.env[key]) {
     return import.meta.env[key];
+  }
+  if (typeof window !== "undefined" && fallback && typeof fallback === "string" && fallback.startsWith("http://4.224.186.213/evaluation-service/")) {
+    return fallback.replace("http://4.224.186.213", "");
   }
   return fallback;
 };
