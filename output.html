@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Top 10 Priority Notifications</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #0f172a;
+      color: #f8fafc;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .card {
+      background: #1e293b;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
+      width: 100%;
+      max-width: 900px;
+      padding: 32px;
+      border: 1px solid #334155;
+    }
+    h2 {
+      margin-top: 0;
+      margin-bottom: 24px;
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      background: linear-gradient(to right, #38bdf8, #818cf8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+    }
+    th {
+      padding: 12px 16px;
+      color: #94a3b8;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border-bottom: 1px solid #334155;
+    }
+    td {
+      padding: 16px;
+      border-bottom: 1px solid #334155;
+      font-size: 14px;
+    }
+    tr:last-child td {
+      border-bottom: none;
+    }
+    .rank {
+      font-weight: 600;
+      color: #64748b;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 10px;
+      border-radius: 9999px;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.025em;
+    }
+    .badge-placement {
+      background: rgba(14, 165, 233, 0.15);
+      color: #38bdf8;
+      border: 1px solid rgba(14, 165, 233, 0.3);
+    }
+    .badge-result {
+      background: rgba(168, 85, 247, 0.15);
+      color: #c084fc;
+      border: 1px solid rgba(168, 85, 247, 0.3);
+    }
+    .badge-event {
+      background: rgba(234, 179, 8, 0.15);
+      color: #facc15;
+      border: 1px solid rgba(234, 179, 8, 0.3);
+    }
+    .msg {
+      font-weight: 500;
+      color: #e2e8f0;
+    }
+    .time {
+      color: #64748b;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>Priority Inbox &mdash; Top 10 Notifications</h2>
+    <table>
+      <thead>
+        <tr>
+          <th style="width: 60px;">Rank</th>
+          <th style="width: 140px;">Type</th>
+          <th>Message</th>
+          <th style="width: 180px;">Timestamp</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+      <tr>
+        <td class="rank">1</td>
+        <td><span class="badge badge-placement">Placement</span></td>
+        <td class="msg">Marriott International Inc. hiring</td>
+        <td class="time">2026-06-26 05:25:19</td>
+      </tr>
+    
+      <tr>
+        <td class="rank">2</td>
+        <td><span class="badge badge-placement">Placement</span></td>
+        <td class="msg">Microsoft Corporation hiring</td>
+        <td class="time">2026-06-25 19:26:49</td>
+      </tr>
+    
+      <tr>
+        <td class="rank">3</td>
+        <td><span class="badge badge-placement">Placement</span></td>
+        <td class="msg">Marriott International Inc. hiring</td>
+        <td class="time">2026-06-25 16:57:43</td>
+      </tr>
+    
+      <tr>
+        <td class="rank">4</td>
+        <td><span class="badge badge-placement">Placement</span></td>
+        <td class="msg">Booking Holdings Inc. hiring</td>
+        <td class="time">2026-06-25 16:57:34</td>
+      </tr>
+    
+      <tr>
+        <td class="rank">5</td>
+        <td><span class="badge badge-placement">Placement</span></td>
+        <td class="msg">Booking Holdings Inc. hiring</td>
+        <td class="time">2026-06-25 16:57:25</td>
+      </tr>
+    
+      <tr>
+        <td class="rank">6</td>
+        <td><span class="badge badge-placement">Placement</span></td>
+        <td class="msg">Marvell Technology Inc. hiring</td>
+        <td class="time">2026-06-25 15:56:22</td>
+      </tr>
+    
+      <tr>
+        <td class="rank">7</td>
+        <td><span class="badge badge-placement">Placement</span></td>
+        <td class="msg">Nvidia Corporation hiring</td>
+        <td class="time">2026-06-25 07:56:13</td>
+      </tr>
+    
+      <tr>
+        <td class="rank">8</td>
+        <td><span class="badge badge-placement">Placement</span></td>
+        <td class="msg">Apple Inc. hiring</td>
+        <td class="time">2026-06-25 07:26:31</td>
+      </tr>
+    
+      <tr>
+        <td class="rank">9</td>
+        <td><span class="badge badge-placement">Placement</span></td>
+        <td class="msg">Amgen Inc. hiring</td>
+        <td class="time">2026-06-25 06:25:37</td>
+      </tr>
+    
+      <tr>
+        <td class="rank">10</td>
+        <td><span class="badge badge-result">Result</span></td>
+        <td class="msg">end-sem</td>
+        <td class="time">2026-06-26 05:25:55</td>
+      </tr>
+    
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
